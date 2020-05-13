@@ -11,7 +11,7 @@ class Particle {
     this.rand = random(0, 100);
     this.randsize_vert = int(random(2, 3));
     this.randsize = int(random(3, 4));
-    this.randsize2 = int(random(4, 8)); //4 to 8
+    this.randsize2 = int(random(4, 6)); //4 to 8
     this.img = img_;
     this.size_v2 = skip;
     this.maxsize = width / this.randsize; //(skip / (particleßcount/1.5)) * 10.0 ;//random(1, 3) * (height/12) ;//40 //50;
