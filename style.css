@@ -11,7 +11,7 @@ body {
   justify-content: center;
   /* This centers our sketch vertically. */
   align-items: center;
-  font-family: "Avenir Next", "Avenir", 'Nunito Sans' sans-serif;
+  font-family: "Avenir Next", "Avenir", "Nunito Sans" sans-serif;
 }
 
 canvas {
