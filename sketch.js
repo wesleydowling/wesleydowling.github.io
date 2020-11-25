@@ -66,6 +66,9 @@ let maskimg;
 let maskimg2;
 let maskvptimg;
 
+let strokew;
+let inc;
+
 function centerCanvas() {
   var cnv_x = (windowWidth - width) / 2;
   var cnv_y = (windowHeight - height) / 2;
@@ -97,10 +100,11 @@ function setup() {
     cnv.id('mycanvas');
     cnv.style('display', 'block');
     FScreen.style.display = "block";
+    inc = 2;
 
   } else {
 
-
+inc = 0;
     skip = 200;
     if (windowWidth < windowHeight) {
       inner = iosInnerHeight();
@@ -185,8 +189,9 @@ function draw() {
 function particle_draw() {
 
   blendMode(BLEND);
-  background(77, 110, 255); //23, 73, 219//consider black bg
+  background(1, 89, 189); //23, 73, 219//consider black bg
 
+  strokew = (width*(0.33))/100 + inc;
 
   ps.run();
 
@@ -206,9 +211,6 @@ function particle_draw() {
   if (loadvptmask) {
     image(maskimg2, 0, 0,width,height);
   }
-
-
-
 }
 
 function keyPressed(){
@@ -219,11 +221,24 @@ function keyPressed(){
 
     if (hideicon) {
     icons.style.display = "none";
+
   }else{
     icons.style.display = "block";
   }
 
   }
+
+
+if (key == 'u'){
+inc = inc + 1;
+console.log(strokew);
+}
+
+if (key == 'd'){
+inc = inc - 1;
+}
+
+
 
 if (key == 'M' || key == 'm' ){
     loadmask = !loadmask;
@@ -279,11 +294,12 @@ function infoInstructions() {
   myLinks.style.display = "block";
   myInfo.style.display = "block";
   //  myInfo.style.overflowY = "scroll";
-  myInfo.style.background = "rgba(255, 255, 255, 0.8)";
+  myInfo.style.background = "rgba(255, 255, 255, 0.9)";
+
 
   if (instruction_toggle) {
     myInfo.style.display = "block";
-    myInfo.style.background = "rgba(255, 255, 255, 0.8)";
+    myInfo.style.background = "rgba(255, 255, 255, 0.9)";
     //  myInfo.style.overflowY = "scroll";
   } else {
     myInfo.style.display = "none";
@@ -292,6 +308,7 @@ function infoInstructions() {
     //  myInfo.style.overflowY = "hidden";
     ps.get_moving();
   }
+
 
 }
 

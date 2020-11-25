@@ -1,9 +1,12 @@
 html, body {
-  height: 100.1%;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: calc(1em + 1vw);
 }
 
 body {
-  margin: 0;
   display: flex;
   overflow: hidden;
   /* Hide scrollbars */
@@ -28,6 +31,7 @@ canvas {
 
 .topnav #myLinks {
   display: none;
+
 }
 
 .topnav #FScreen {
@@ -41,6 +45,7 @@ canvas {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 4vw;
+
 }
 
 .topnav a.icon {
@@ -51,12 +56,12 @@ canvas {
 .topnav a:hover {
   background-color: white;
   color: black;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: white;
+  opacity: 0.9;
 }
 
 .content  {
@@ -65,7 +70,7 @@ canvas {
   font-size: 3.5vw;
   center: 0;
   width: 80%;
-  height:70%;
+  height:65%;
   padding: 20px;
 }
 

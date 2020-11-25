@@ -15,7 +15,8 @@ function firebasesetup() {
 
   database = firebase.database();
 
-  var ref = database.ref('test');
+  var ref = database.ref('test').limitToLast(100);
+
   ref.on('child_added', gotData, errData);
 
 }
