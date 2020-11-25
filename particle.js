@@ -39,10 +39,10 @@ class Particle {
         this.c = color(240, 236, 0); // yellow
      } else if (this.rand > 30 && this.rand < 50) {
         this.c = color(255, 0, 120); //220, 0, 255) //magenta
-      } else if (this.rand > 50 && this.rand < 70) {
+      } else if (this.rand > 50 && this.rand < 75) {
         this.c = color(45, 255, 254); //191, 240, 255// /cyan
-    } else if (this.rand > 70 && this.rand < 75) {
-        this.c = color(0, 229, 108); //191, 240, 255// green
+    // } else if (this.rand > 70 && this.rand < 75) {
+    //     this.c = color(0, 229, 108); //191, 240, 255// green
       } else if (this.rand > 75 && this.rand < 80) {
         this.c = color(253, 253, 253); // blue
       } else {
