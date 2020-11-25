@@ -100,7 +100,7 @@ function setup() {
     cnv.id('mycanvas');
     cnv.style('display', 'block');
     FScreen.style.display = "block";
-    inc = 2;
+    inc = 1.5;
 
   } else {
 
