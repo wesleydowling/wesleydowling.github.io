@@ -8,12 +8,19 @@ function shaderMousePressed() {
 if  (mouseY > 100 && mouseY < height && !instruction_toggle ) {
 
   colour = 0;//cam.get(width - mouseX, mouseY);
+
+let velx = random(-5, 5);
+let vely = random(-5, 5);
+let col_rand = random(0, 100);
+
   var data = {
     mouseX_loc: mouseX,
     mouseY_loc: mouseY,
-    colour_loc: colour,
+    colour_loc: col_rand,
     deviceWidth: windowWidth,
-    deviceHeight: windowHeight
+    deviceHeight: windowHeight,
+    velocity_x: velx,
+    velocity_y:vely
   }
 
   var test = database.ref('test');

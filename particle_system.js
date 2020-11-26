@@ -1,14 +1,14 @@
 let particlecount;
 
 class ParticleSystem {
-  constructor(position, img_) {
+  constructor(position) {
     this.origin = position.copy();
     this.particles = [];
   }
 
-  addParticle(x, y, rand, img, devWidth, devHeight) {
+  addParticle(x, y, rand, devWidth, devHeight, _velx, _vely) {
     if (x !== undefined && y !== undefined) {
-      this.particles.push(new Particle(x, y, rand, img, devWidth, devHeight));
+      this.particles.push(new Particle(x, y, rand, devWidth, devHeight, _velx, _vely));
       particlecount = this.particles.length;
     } else {
       this.particles.push(new Particle(this.origin.x, this.origin.y));

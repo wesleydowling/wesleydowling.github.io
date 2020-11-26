@@ -27,7 +27,7 @@ function gotData(data) {
   // // Grab the keys to iterate over the object
   var keys = Object.keys(test);
 
-  ps.addParticle(test.mouseX_loc, test.mouseY_loc, 0, test.colour_loc, test.deviceWidth, test.deviceHeight);
+  ps.addParticle(test.mouseX_loc, test.mouseY_loc, test.colour_loc, test.deviceWidth, test.deviceHeight, test.velocity_x, test.velocity_y);
 
 }
 

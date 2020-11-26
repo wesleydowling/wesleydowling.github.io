@@ -1,18 +1,17 @@
 class Particle {
-  constructor(x, y, rand, img_, devWidth, devHeight) {
+  constructor(x, y, rand, devWidth, devHeight,_velx,_vely) {
     this.origposition = createVector(x, y);
     this.position = createVector(map(x, 0, devWidth, 0, width), map(y, 0, devHeight, 0, height));
     this.velocity = createVector();
-    this.velocity_v2 = createVector(random(-5, 5), random(-5, 5));
+    this.velocity_v2 = createVector(_velx, _vely);
     this.acceleration = createVector();
     this.home = this.origposition.copy();
     this.lifespan = 0.0;
     this.fill_alpha = 0.0;
-    this.rand = random(0, 100);
+    this.rand = rand;
     this.randsize_vert = int(random(2, 3));
     this.randsize = int(random(3, 4));
     this.randsize2 = int(random(4, 6)); //4 to 8
-    this.img = img_;
     this.size_v2 = skip;
     this.maxsize = width / this.randsize; //(skip / (particleßcount/1.5)) * 10.0 ;//random(1, 3) * (height/12) ;//40 //50;
     this.radius = 25;
@@ -32,8 +31,7 @@ class Particle {
     this.aspect2 = devHeight / devWidth;
   }
 
-  colour(rand) {
-
+  colour() {
 
     if (this.rand > 0 && this.rand < 30) {
         this.c = color(240, 236, 0); // yellow
@@ -144,7 +142,7 @@ class Particle {
 
       this.maxsize = width / this.randsize;
 
-      this.colour(this.rand);
+      this.colour();
       this.d = dist(this.position.x, this.position.y, this.home.x, this.home.y);
 
       this.stroke_alpha_osc = 0.0; //0.1 * this.amplitude * sin(TWO_PI * frameCount / this.period);
