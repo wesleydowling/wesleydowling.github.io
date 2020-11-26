@@ -20,6 +20,10 @@ class ParticleSystem {
       particle.run();
     }
 
+    if (this.particles.length > 101 ){
+      this.particles.shift();
+    }
+
     // Filter removes any elements of the array that do not pass the test
     this.particles = this.particles.filter(particle => !particle.isDead());
   }
